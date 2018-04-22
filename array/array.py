@@ -1,7 +1,7 @@
 # practice using array in python
 def array_test():
     a = [1, 2, 3, 4]
-
+    
     print("Original array: ", a)
 
     print("adding 5 at the end of the array:", end=" ")
@@ -32,10 +32,10 @@ def array_test():
 
     print("The length of the array: ", len(a))
 
-    print("Inserting the value of 10 at the index 2:", end=" ")
-    a.insert(2, 10)
+    print("Inserting the value of 10 at the index 0:", end=" ")
+    a.insert(0, 10)
     print(a)
-    
+
 
 def main():
     array_test()
