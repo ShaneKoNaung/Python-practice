@@ -1,45 +1,47 @@
 from linked_list_stack import LinkedListStack
+import pytest
 
 
-def main():
-    print("Creating a stack...")
-    a = LinkedListStack()
-    print("Length of the stack:", len(a))
-    print("The stack is empty:", a.is_empty())
-    print()
+a = LinkedListStack()
+b = LinkedListStack()
+c = LinkedListStack()
+d = LinkedListStack()
 
-    print("Pushing 10 to the stack...")
-    a.push(10)
-    print("The element at the top of the stack is", a.top())
-    print("Length of the stack:", len(a))
-    print("The stack is empty:", a.is_empty())
-    print()
+a_element = [1,2,3,4,5]
+b_element = ['a','b','c']
+c_element = [2,4,1,3,5]
 
-    print("Pushing 20 30 40 50 to the stack in this order...")
-    a.push(20)
-    a.push(30)
-    a.push(40)
-    a.push(50)
-    print("The element at the top of the stack is", a.top())
-    print("Length of the stack:", len(a))
-    print("The stack is empty:", a.is_empty())
-    print()
+for i in a_element:
+    a.push(i)
+for i in b_element:
+    b.push(i)
+for i in c_element:
+    c.push(i)
 
-    print("Popping the stack...")
-    a.pop()
-    print("The element at the top of the stack is", a.top())
-    print("Length of the stack:", len(a))
-    print("The stack is empty:", a.is_empty())
-    print()
+def test_len():
+    assert len(a) == 5
+    assert len(b) == 3
+    assert len(c) == 5
+    assert len(d) == 0
 
-    print("Popping the stack 4 times...")
-    for i in range(3):
-        a.pop()
-    print("The element at the top of the stack is", a.top())
-    print("Length of the stack:", len(a))
-    print("The stack is empty:", a.is_empty())
-    print()
+def test_is_empty():
+    assert a.is_empty() == False
+    assert b.is_empty() == False
+    assert d.is_empty() == True
 
+def test_top():
+    assert a.top() == 5
+    assert b.top() == 'c'
+    assert c.top() == 5
+    with pytest.raises(IndexError):
+        d.top()
 
-if __name__ == "__main__":
-    main()
+def test_pop():
+    for i in reversed(a_element):
+        assert a.pop() == i
+    for i in reversed(b_element):
+        assert b.pop() == i
+    for i in reversed(c_element):
+        assert c.pop() == i
+    with pytest.raises(IndexError):
+        d.pop()
