@@ -1,4 +1,4 @@
-''' implementation of stack using linked list '''
+''' Implementation of stack using singly linked list '''
 
 
 class LinkedListStack(object):
@@ -13,7 +13,7 @@ class LinkedListStack(object):
         self._size = 0
 
     def __len__(self):
-        ''' return the number of elements in the list'''
+        ''' return Number of elements in the list '''
         return self._size
 
     def is_empty(self):
@@ -28,7 +28,7 @@ class LinkedListStack(object):
     def top(self):
         ''' return the element at the top of the stack'''
         if self.is_empty():
-            raise IndexError("stack is empty")
+            raise IndexError("Stack is empty")
         else:
             return self._head._data
 
