@@ -21,5 +21,22 @@ def csn():
     print(values_list)
     print(values_tuple)
 
-print('2 :\n')
+print('\n2 :\n')
 csn()
+
+# 3. Write a program which will find all the numbers which are divisible by
+# 7 but are not a multiple of 5, between 1000 and 1500 (both included). The
+# numbers obtained should be printed in a comma-separated sequence on a single
+# line.
+
+def sevenNotFive():
+    l = []
+    for i in range(1000, 1501):
+        if i % 7 == 0 and i % 5 != 0:
+            l.append(str(i))
+    l = ','.join(l)
+    print(l)
+
+print('\n 3 :\n')
+sevenNotFive()
+
