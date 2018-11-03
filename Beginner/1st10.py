@@ -57,3 +57,15 @@ def sumPrint(a, b):
 print('\n 5 :\n')
 print(f"The sum of 3 and 4 :", end=' ')
 sumPrint('3','4')
+
+# 6. Write a program which can compute the given factorial of a number.
+
+def factorial(n):
+    '''return factorial of n'''
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+
