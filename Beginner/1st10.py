@@ -48,3 +48,12 @@ def sum(a,b):
 print('\n 4 :\n')
 print("The sum of 3 and 4 :", sum(3,4))
 
+# 5. Define a function that can receive two integral numbers in string form
+# and compute their sum and then print it in console.
+
+def sumPrint(a, b):
+    print(f'{int(a)+int(b)}')
+
+print('\n 5 :\n')
+print(f"The sum of 3 and 4 :", end=' ')
+sumPrint('3','4')
