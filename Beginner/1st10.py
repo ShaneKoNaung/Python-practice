@@ -87,5 +87,14 @@ import random
 def dice():
     return random.randint(1,6)
 
-for i in range(100):
-    print(dice())
+# 9. Define a function which can generate a dictionary where the keys are
+# numbers between 1 and 20 (both included) and the values are square of keys.
+# The function should just print the values only.
+
+def valOnly():
+    d = {}
+    for i in range(21):
+        d[i] = i ** 2
+    print(d.values())
+
+valOnly()
