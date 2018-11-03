@@ -40,3 +40,11 @@ def sevenNotFive():
 print('\n 3 :\n')
 sevenNotFive()
 
+# 4. Define a function which can compute the sum of two numbers.
+
+def sum(a,b):
+    return a+b
+
+print('\n 4 :\n')
+print("The sum of 3 and 4 :", sum(3,4))
+
