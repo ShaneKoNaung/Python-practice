@@ -68,4 +68,24 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
+# 7. Use list comprehension to square each odd number in a list. The list is
+# input by a sequence of comma-separated numbers
 
+def sqList():
+    '''square each odd number in a list'''
+    l = input('Enter comma-separated numbers... :')
+    l = l.split(',')
+    l = [int(i)**2 for i in l if int(i) % 2 == 1]
+    return l
+
+print(sqList())
+
+# 8. Write a program to roll a dice and get a random output (1-6).
+
+import random
+
+def dice():
+    return random.randint(1,6)
+
+for i in range(100):
+    print(dice())
