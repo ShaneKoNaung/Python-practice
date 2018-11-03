@@ -98,3 +98,20 @@ def valOnly():
     print(d.values())
 
 valOnly()
+
+# 10. Define a class which has at least two methods: getstring: to get a string
+# from user. printstring: to print the string in upper case. Include a test function to test the class methods.
+
+class IOString():
+    def __init__(self):
+        self.str = ''
+    
+    def getstring(self):
+        self.str = input('Input string ...')
+    
+    def printstring(self):
+        print(self.str.upper())
+
+strObj = IOString()
+strObj.getstring()
+strObj.printstring()
