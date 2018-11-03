@@ -9,3 +9,17 @@ def dict_(n):
     print(d)
 print('1 :\n')
 dict_(10)
+
+# 2. Write a program which accepts a sequence of comma-separated
+# numbers from console/user and generates a list and a tuple which contains every
+# number.
+
+def csn():
+    values = input('Enter comma-separated numbers : ')
+    values_list = values.split(',')
+    values_tuple = tuple(values_list)
+    print(values_list)
+    print(values_tuple)
+
+print('2 :\n')
+csn()
